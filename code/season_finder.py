@@ -1,3 +1,7 @@
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+
 def month_to_code(month_str):
     """
     Converts a month string to its corresponding numerical code.
@@ -48,3 +52,26 @@ def month_to_code(month_str):
         return month_formats[month_str]
     else:
         raise ValueError(f"Invalid month format: {month_str}")
+    
+def display_img(image_path):
+    """
+    Display an image using Matplotlib.
+
+    Parameters:
+        image_path (str): Path to the image file.
+
+    Returns:
+        None
+    """
+
+    # Load the image using matplotlib's imread function
+    image = mpimg.imread(image_path)
+
+    # Display the image using matplotlib's imshow function
+    plt.imshow(image)
+
+    # Hide the axis labels and ticks
+    plt.axis('off')
+
+    # Show the image
+    plt.show()
