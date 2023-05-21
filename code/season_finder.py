@@ -75,3 +75,105 @@ def display_img(image_path):
 
     # Show the image
     plt.show()
+
+def month_to_season(month_str, country_str):
+    country_season = {
+        "australia" : {
+            1: "Summer",
+            2: "Summer",
+            3: "Autumn",
+            4: "Autumn",
+            5: "Autumn",
+            6: "Winter",
+            7: "Winter",
+            8: "Winter",
+            9: "Spring",
+            10: "Spring",
+            11: "Spring",
+            12: "Summer"
+        },
+        "noongar" : {
+            1: "Birak",
+            2: "Bunuru",
+            3: "Bunuru",
+            4: "Djeran",
+            5: "Djeran",
+            6: "Makuru",
+            7: "Makuru",
+            8: "Djilba",
+            9: "Djilba",
+            10: "Kambarang",
+            11: "Kambarang",
+            12: "Birak"
+        },
+        "spain" : {
+            1: "Winter",
+            2: "Winter",
+            3: "Spring",
+            4: "Spring",
+            5: "Spring",
+            6: "Summer",
+            7: "Summer",
+            8: "Summer",
+            9: "Autumn",
+            10: "Autumn",
+            11: "Autumn",
+            12: "Winter"
+        },
+        "japan" : {
+            1: "Winter",
+            2: "Winter",
+            3: "Spring",
+            4: "Spring",
+            5: "Spring",
+            6: "Summer",
+            7: "Summer",
+            8: "Summer",
+            9: "Autumn",
+            10: "Autumn",
+            11: "Autumn",
+            12: "Winter"
+        },
+        "mauritius" : {
+            1: "Summer",
+            2: "Summer",
+            3: "Summer",
+            4: "Summer",
+            5: "Autumn",
+            6: "Winter",
+            7: "Winter",
+            8: "Winter",
+            9: "Winter",
+            10: "Spring",
+            11: "Summer",
+            12: "Summer"
+        },
+        "sri lanka" : {
+            1: "Northeast Monsoon",
+            2: "Northeast Monsoon",
+            3: "Inter-Monsoon",
+            4: "Inter-Monsoon",
+            5: "Southeast Monsoon",
+            6: "Southeast Monsoon",
+            7: "Southeast Monsoon",
+            8: "Southeast Monsoon",
+            9: "Southeast Monsoon",
+            10: "Inter-Monsoon",
+            11: "Inter-Monsoon",
+            12: "Northeast Monsoon"
+        },
+        "malaysia" : {
+            1: "Northeast Monsoon",
+            2: "Northeast Monsoon",
+            3: "Inter-Monsoon",
+            4: "Inter-Monsoon",
+            5: "Southeast Monsoon",
+            6: "Southeast Monsoon",
+            7: "Southeast Monsoon",
+            8: "Southeast Monsoon",
+            9: "Southeast Monsoon",
+            10: "Inter-Monsoon",
+            11: "Inter-Monsoon",
+            12: "Northeast Monsoon"
+        },
+    }
