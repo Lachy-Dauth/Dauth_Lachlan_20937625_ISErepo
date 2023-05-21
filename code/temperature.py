@@ -23,7 +23,6 @@ def temperature_difference(temp, mean_temp):
     else:
         return f"It is {temp_word} than the mean temperature."
 
-
 def temperature_finder(temperature_str, city_str, time_str):
     """
     Finds the temperature difference between a given temperature and the mean temperature of a specific city and time period.
@@ -65,3 +64,9 @@ def input_temperature():
 
     # Call the temperature_finder function with user-provided values
     temperature_finder(temperature, city, time)
+
+def main():
+    input_temperature()
+
+if __name__ == "__main__":
+    main()
