@@ -226,3 +226,20 @@ def month_to_season(month_str, country_str):
     # Display the image representing the season (display_img function not provided)
     display_img(image_path)
 
+def input_month_to_season():
+    """
+    Get user input for the month and country, and call the month_to_season function.
+    """
+
+    # Prompt the user for the month and country
+    month = input("Enter a month: ")
+    country = input("Enter a country: ")
+
+    # Call the month_to_season function with user-provided values
+    month_to_season(month, country)
+
+def main():
+    input_month_to_season()
+
+if __name__ == "__main__":
+    main()
