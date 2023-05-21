@@ -77,6 +77,20 @@ def display_img(image_path):
     plt.show()
 
 def month_to_season(month_str, country_str):
+    """
+    Determine the season for a given month in a specific country and display an image representing that season.
+
+    Args:
+        month_str (str): A string representing a month.
+        country_str (str): A string representing a country.
+
+    Returns:
+        None
+    Raises:
+        ValueError: If the provided country is not found.
+    """
+
+    # Dictionary mapping months to seasons for different countries
     country_season = {
         "australia" : {
             1: "Summer",
@@ -177,3 +191,38 @@ def month_to_season(month_str, country_str):
             12: "Northeast Monsoon"
         },
     }
+
+    # Dictionary mapping seasons to image file paths
+    image_dict = {
+        "Summer" : "../ISEimages/summer.png",
+        "Autumn" : "../ISEimages/autumn.png",
+        "Winter" : "../ISEimages/winter.png",
+        "Spring" : "../ISEimages/spring.png",
+        "Birak" : "../ISEimages/birak.png",
+        "Bunuru" : "../ISEimages/bunuru.png",
+        "Djeran" : "../ISEimages/djeran.png",
+        "Makuru" : "../ISEimages/makuru.png",
+        "Djilba" : "../ISEimages/djilba.png",
+        "Kambarang" : "../ISEimages/kambarang.png",
+        "Inter-Monsoon" : "../ISEimages/inter-monsoon.png",
+        "Southeast Monsoon" : "../ISEimages/monsoon.png",
+        "Northeast Monsoon" : "../ISEimages/monsoon.png",
+    }
+
+    country_key = country_str.lower()
+
+    if country_key not in country_season:
+        raise ValueError(f"Country '{country_str}' is not found in the database.")
+
+    month_code = month_to_code(month_str)
+    season = country_season[country_key][month_code]
+
+    # Get the image path for the season
+    image_path = image_dict[season]
+
+    # Print the month, country, and corresponding season
+    print(f"When it is {month_str} in {country_str}, it is the {season} season.")
+
+    # Display the image representing the season (display_img function not provided)
+    display_img(image_path)
+
