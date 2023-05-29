@@ -11,14 +11,16 @@ def temperature_difference(temp, mean_temp):
 
     """
     temp_word = ""
-    diff = abs(temp - mean_temp)
+    diff = round(abs(temp - mean_temp), 3)
 
     if temp > mean_temp:
         temp_word = "hotter"
     else:
         temp_word = "colder"
 
-    if diff > 5:
+    if diff == 0:
+        return "It is the same as the mean temperature."
+    elif diff > 5:
         return f"It is {temp} degrees outside, {diff} degrees {temp_word} than the mean temperature, {mean_temp}."
     else:
         return f"It is {temp_word} than the mean temperature."
